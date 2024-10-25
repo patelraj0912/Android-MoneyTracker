@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:layout_marginHorizontal="50dp">
+    <TextView
+        android:id="@+id/heading"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingVertical="5dp"
+        android:textColor="@color/white"
+        android:background="#486DDA"
+        android:text="SELECT DATE RANGE"
+        android:textSize="25sp"
+        android:gravity="center"
+        android:textStyle="bold"/>
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scrollbars="none">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center"
+            >
+        <TextView
+            android:id="@+id/textViewFromDate"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="20sp"
+            android:hint="From Date"
+            android:background="@drawable/input_field"
+            android:layout_margin="5dp"
+            android:padding="5dp"
+            android:drawableRight="@drawable/ic_calander"/>
+
+        <TextView
+            android:id="@+id/textViewToDate"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="20sp"
+            android:hint="To Date"
+            android:background="@drawable/input_field"
+            android:layout_margin="5dp"
+            android:padding="5dp"
+            android:drawableRight="@drawable/ic_calander"/>
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

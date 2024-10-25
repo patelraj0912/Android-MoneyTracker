@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:layout_marginHorizontal="50dp">
+    <TextView
+        android:id="@+id/heading"
+        android:layout_width="match_parent"
+        android:layout_height="64dp"
+        android:textColor="@color/white"
+        android:background="#8BC34A"
+        android:text="ADD CREDIT"
+        android:textSize="30dp"
+        android:gravity="center"
+        android:textStyle="bold"/>
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scrollbars="none">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+<!--            Description-->
+            <EditText
+                android:id="@+id/txtDescription"
+                android:inputType="text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/input_field"
+                android:textColorHint="#83000000"
+                android:textColor="@color/black"
+                android:padding="10dp"
+                android:maxLength="15"
+                android:layout_marginTop="16dp"
+                android:layout_marginLeft="4dp"
+                android:layout_marginRight="4dp"
+                android:layout_marginBottom="4dp"
+                android:hint="Description" />
+<!--            Amount-->
+            <EditText
+                android:id="@+id/txtAmount"
+                android:inputType="numberDecimal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/input_field"
+                android:textColorHint="#83000000"
+                android:textColor="@color/black"
+                android:padding="10dp"
+                android:maxLength="10"
+                android:layout_marginTop="4dp"
+                android:layout_marginLeft="4dp"
+                android:layout_marginRight="4dp"
+                android:layout_marginBottom="16dp"
+                android:fontFamily="sans-serif"
+                android:hint="Amount"/>
+
+<!--                Date Picker-->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Date"
+                android:textSize="20sp"
+                android:textColor="@color/black"
+                android:textAlignment="center"/>
+            <DatePicker
+                android:id="@+id/date"
+                android:layout_width="match_parent"
+                android:background="@color/white"
+                android:calendarTextColor="@color/black"
+                android:layout_height="226dp"
+                android:datePickerMode="spinner"
+                android:calendarViewShown="false"/>
+
+<!--                Time Picker-->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Time"
+                android:textColor="@color/black"
+                android:textSize="20sp"
+                android:textAlignment="center"/>
+            <TimePicker
+                android:id="@+id/time"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:timePickerMode="spinner"
+                />
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

@@ -1,0 +1,30 @@
+{
+  "project_info": {
+    "project_number": "693432400937",
+    "firebase_url": "https://money-42b47-default-rtdb.firebaseio.com",
+    "project_id": "money-42b47",
+    "storage_bucket": "money-42b47.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:693432400937:android:2f4f5d5eb7ac1cfbfff038",
+        "android_client_info": {
+          "package_name": "com.raj.moneytrackerwithdatabase"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBu1O8ccSVYES0rMlW2JMj3EdNMv3Ndt8o"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

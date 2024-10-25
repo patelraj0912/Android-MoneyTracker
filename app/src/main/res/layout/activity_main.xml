@@ -1,0 +1,218 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:orientation="vertical"
+    android:layout_marginTop="0dp"
+    android:background="@color/white">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+    <!--ACTIVITY-->
+
+        <!--    HEADER-->
+        <LinearLayout
+            android:id="@+id/HEADER"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_marginHorizontal="0dp"
+            android:layout_marginTop="1dp"
+            android:background="@color/white"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_weight="1"
+                android:src="@drawable/money_tracker_logo" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_weight="2"
+                android:paddingVertical="5dp"
+                android:text="Money Tracker"
+                android:textColor="@color/black"
+                android:textSize="30dp"
+                android:textStyle="bold" />
+
+            <com.google.android.material.appbar.AppBarLayout
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_gravity="center"
+                android:layout_marginLeft="10dp"
+                android:layout_weight="1"
+                android:background="@color/white">
+
+                <androidx.appcompat.widget.Toolbar
+                    android:id="@+id/toolbar"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"/>
+            </com.google.android.material.appbar.AppBarLayout>
+        </LinearLayout>
+        <!-- OVER HEADER-->
+
+        <!--        Debit Credit CardView-->
+        <LinearLayout
+            android:id="@+id/Debit_Credit_CardView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_below="@id/HEADER"
+            android:layout_marginHorizontal="10dp"
+            android:layout_marginVertical="10dp">
+            <!--Credit-->
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:backgroundTint="#8BC34A"
+                android:layout_margin="5dp"
+                app:cardCornerRadius="10dp">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:textSize="25dp"
+                        android:text="Credit"
+                        android:textStyle="bold"
+                        android:textAlignment="textStart"
+                        android:textColor="@color/white"
+                        android:layout_marginVertical="2dp"
+                        android:layout_marginLeft="15dp"/>
+                    <TextView
+                        android:id="@+id/TotalCredit"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textSize="25dp"
+                        android:text=""
+                        android:textStyle="bold"
+                        android:textAlignment="textEnd"
+                        android:textColor="@color/white"
+                        android:layout_marginRight="15dp"
+                        android:layout_marginVertical="5dp"/>
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+            <!--Over Credit-->
+            <!--Debit-->
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:backgroundTint="#FF3636"
+                android:layout_margin="5dp"
+                app:cardCornerRadius="10dp">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textSize="25dp"
+                        android:text="Debit"
+                        android:textStyle="bold"
+                        android:textAlignment="textStart"
+                        android:textColor="@color/white"
+                        android:layout_marginVertical="2dp"
+                        android:layout_marginLeft="15dp"/>
+                    <TextView
+                        android:id="@+id/TotalDebit"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textSize="25dp"
+                        android:text=""
+                        android:textStyle="bold"
+                        android:textAlignment="textEnd"
+                        android:textColor="@color/white"
+                        android:layout_marginRight="15dp"
+                        android:layout_marginVertical="5dp"/>
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+            <!--Over Debit-->
+        </LinearLayout>
+        <!--        Over Debit Credit CardView-->
+
+        <!-- TRANSACTION VIEW -->
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@id/Debit_Credit_CardView"
+            android:layout_above="@id/FOOTER">
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:backgroundTint="#37000000"/>
+
+            <ProgressBar
+                android:id="@+id/progressMainActivity"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/recyclerView" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+        <!-- OVER TRANSACTION VIEW -->
+
+        <!--    FOOTER-->
+        <com.google.android.material.bottomappbar.BottomAppBar
+            android:id="@+id/FOOTER"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            tools:ignore="BottomAppBar"
+            android:layout_alignParentBottom="true">
+            <!--        Add Credit Button-->
+            <Button
+                android:id="@+id/btnAddCredit"
+                android:layout_width="100sp"
+                android:layout_height="wrap_content"
+                android:backgroundTint="#8BC34A"
+                android:text="Cr."
+                android:textSize="20dp"
+                android:textStyle="bold"
+                android:layout_gravity="left"
+                android:layout_marginHorizontal="5dp"/>
+
+            <!--        Balance-->
+            <TextView
+                android:id="@+id/TxtBalane"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=""
+                android:textSize="20dp"
+                android:overScrollMode="ifContentScrolls"
+                android:layout_gravity="center"
+                android:textStyle="bold"
+                android:layout_margin="10dp"/>
+            <!--        Add Debit Button-->
+            <Button
+                android:id="@+id/btnAddDebit"
+                android:layout_width="100sp"
+                android:layout_height="wrap_content"
+                android:textFontWeight="1"
+                android:backgroundTint="#FF3636"
+                android:text="Db."
+                android:textSize="20dp"
+                android:layout_gravity="right"
+                android:textStyle="bold"
+                android:layout_marginHorizontal="5dp"/>
+
+        </com.google.android.material.bottomappbar.BottomAppBar>
+        <!--    OVER FOOTER-->
+
+    </RelativeLayout>
+    <!--OVER ACTIVITY-->
+</androidx.appcompat.widget.LinearLayoutCompat>

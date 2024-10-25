@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+<!--        <group android:checkableBehavior="single">-->
+
+        <item
+            android:id="@+id/action_profile"
+            android:title="Profile"
+            app:showAsAction="collapseActionView"
+            android:icon="@drawable/ic_profile"/>
+<!--        <item-->
+<!--            android:id="@+id/action_setting"-->
+<!--            android:title="Settings"-->
+<!--            app:showAsAction="collapseActionView"-->
+<!--            android:icon="@drawable/baseline_settings_24"/>-->
+        <item
+            android:id="@+id/action_logout"
+            android:title="Log Out"
+            app:showAsAction="collapseActionView"
+            android:icon="@drawable/baseline_logout_24"/>
+
+<!--        </group>-->
+<!--        <item android:title="Communication">-->
+<!--                <menu>-->
+<!--                        <group>-->
+<!--                                <item-->
+<!--                                    android:id="@+id/one"-->
+<!--                                    android:title="One"/>-->
+<!--                                <item-->
+<!--                                    android:id="@+id/two"-->
+<!--                                    android:title="Two"/>-->
+
+<!--                        </group>-->
+<!--                </menu>-->
+<!--        </item>-->
+</menu>
